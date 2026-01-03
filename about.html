@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formations | Abdelhakim Bougraine</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .nav-glow {
+            border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+            box-shadow: 0 4px 15px -5px rgba(212, 175, 55, 0.4);
+        }
+
+        .timeline-card {
+            background: rgba(26, 32, 44, 0.8);
+            border-left: 4px solid #eab308;
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-card:hover {
+            transform: translateX(10px);
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f172a] text-white font-sans">
+
+    <nav class="bg-[#1a202c] nav-glow p-4 sticky top-0 z-50">
+        <ul class="flex justify-center space-x-8 font-medium text-sm md:text-base">
+            <li><a href="index.html" class="hover:text-yellow-500 transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-yellow-500 transition-colors">About</a></li>
+            <li><a href="education.html" class="text-yellow-500 underline">Education</a></li>
+            <li><a href="experience.html" class="hover:text-yellow-500 transition-colors">Experience</a></li>
+            <li><a href="projet.html" class="hover:text-yellow-500 transition-colors">Projects</a></li>
+            <li><a href="contact.html" class="hover:text-yellow-500 transition-colors">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="relative z-10 max-w-4xl mx-auto py-16 px-6">
+
+        <header class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4 italic">Mes <span class="text-yellow-500">Formations</span></h2>
+            <p class="text-gray-400">Mon parcours académique et mes certifications</p>
+        </header>
+
+        <div class="space-y-8">
+
+            <div class="timeline-card p-6 rounded-r-xl shadow-xl">
+                <span class="text-yellow-500 font-bold text-sm">2025 - Présent</span>
+                <h3 class="text-xl font-bold mt-1">Développement Digital / Web</h3>
+                <p class="text-blue-400 font-medium">Auto-formation & Projets Pratiques</p>
+                <p class="text-gray-400 mt-2 text-sm leading-relaxed">
+                    Apprentissage intensif des technologies Web (HTML5, CSS3, JavaScript, Tailwind CSS) et création
+                    d'interfaces utilisateur interactives avec intégration d'effets visuels avancés.
+                </p>
+            </div>
+
+            <div class="timeline-card p-6 rounded-r-xl shadow-xl">
+                <span class="text-yellow-500 font-bold text-sm">2023 - 2025</span>
+                <h3 class="text-xl font-bold mt-1">Dts en Analyse Marketing</h3>
+                <p class="text-blue-400 font-medium">IFIAG Vocational School - Casablanca</p>
+                <p class="text-gray-400 mt-2 text-sm">Diplôme obtenu avec focus sur le comportement du consommateur et
+                    les stratégies digitales.</p>
+            </div>
+
+            <div class="timeline-card p-6 rounded-r-xl shadow-xl">
+                <span class="text-yellow-500 font-bold text-sm">2023 - 2025</span>
+                <h3 class="text-xl font-bold mt-1">DEUG en Commerce et Marketing</h3>
+                <p class="text-blue-400 font-medium">FSJES Ain Chock</p>
+                <p class="text-gray-400 mt-2 text-sm">Formation universitaire approfondie sur les bases de l'économie و
+                    المعاملات التجارية.</p>
+            </div>
+
+            <div class="timeline-card p-6 rounded-r-xl shadow-xl">
+                <span class="text-yellow-500 font-bold text-sm">Juin 2024</span>
+                <h3 class="text-xl font-bold mt-1">Formation en Intelligence Artificielle</h3>
+                <p class="text-blue-400 font-medium">IFIAG / Académie Chemin</p>
+                <p class="text-gray-400 mt-2 text-sm">Exploration des outils d'IA pour optimiser les processus marketing
+                    et créatifs.</p>
+            </div>
+
+            <div class="timeline-card p-6 rounded-r-xl shadow-xl opacity-80">
+                <span class="text-yellow-500 font-bold text-sm">2022 - 2023</span>
+                <h3 class="text-xl font-bold mt-1">BAC Sciences Physiques</h3>
+                <p class="text-blue-400 font-medium">Option Arabe</p>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

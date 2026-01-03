@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expériences | Abdelhakim Bougraine</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .nav-glow {
+            border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+            box-shadow: 0 4px 15px -5px rgba(212, 175, 55, 0.4);
+        }
+
+        .exp-card {
+            background: rgba(26, 32, 44, 0.7);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(12px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .exp-card:hover {
+            border-color: #eab308;
+            box-shadow: 0 0 25px rgba(234, 179, 8, 0.2);
+            transform: scale(1.02);
+        }
+
+        .status-badge {
+            background: linear-gradient(90deg, #eab308, #b45309);
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f172a] text-white font-sans">
+
+    <nav class="bg-[#1a202c] nav-glow p-4 sticky top-0 z-50">
+        <ul class="flex justify-center space-x-6 md:space-x-10 font-medium text-sm md:text-base">
+            <li><a href="index.html" class="hover:text-yellow-500 transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-yellow-500 transition">About</a></li>
+            <li><a href="education.html" class="hover:text-yellow-500 transition">Education</a></li>
+            <li><a href="experience.html" class="text-yellow-500 border-b-2 border-yellow-500 pb-1">Experience</a></li>
+            <li><a href="projet.html" class="hover:text-yellow-500 transition">Projects</a></li>
+            <li><a href="contact.html" class="hover:text-yellow-500 transition">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="relative z-10 max-w-5xl mx-auto py-20 px-6">
+        <header class="text-center mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold italic mb-4 text-yellow-500">Expériences Professionnelles</h1>
+            <p class="text-gray-400">Mon parcours sur le terrain et mes engagements actuels</p>
+        </header>
+
+        <div class="grid gap-10">
+
+            <div class="exp-card p-8 rounded-3xl relative overflow-hidden">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                    <div>
+                        <h2 class="text-2xl font-bold text-white uppercase tracking-wider">Agent de Surveillance et
+                            Sécurité</h2>
+                        <p class="text-yellow-500 font-medium">Entreprise de Sécurité</p>
+                    </div>
+                    <span class="status-badge text-black text-xs font-black px-4 py-1 rounded-full mt-2 md:mt-0">
+                        AOÛT 2025 - PRÉSENT
+                    </span>
+                </div>
+                <div class="border-t border-gray-700 pt-4">
+                    <p class="text-gray-300 leading-relaxed">
+                        Responsable de la protection des biens et des personnes, assurant la vigilance et le respect des
+                        protocoles de sécurité au sein de l'établissement.
+                    </p>
+                </div>
+            </div>
+
+            <div class="exp-card p-8 rounded-3xl border-l-4 border-l-yellow-500">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                    <div>
+                        <h2 class="text-2xl font-bold text-white uppercase tracking-wider">Stage Professionnel</h2>
+                        <p class="text-blue-400 font-medium text-lg">SOCIÉTÉ ELECTROPLANET</p>
+                    </div>
+                    <span
+                        class="bg-gray-800 text-yellow-500 border border-yellow-500/50 text-xs font-bold px-4 py-1 rounded-full mt-2 md:mt-0 uppercase">
+                        SESSION 2025
+                    </span>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 mt-4">
+                    <ul class="space-y-3">
+                        <li class="flex items-center space-x-3">
+                            <span class="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
+                            <span class="text-gray-300 text-sm">Services de vente</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
+                            <span class="text-gray-300 text-sm">Services de Balisage</span>
+                        </li>
+                    </ul>
+                    <ul class="space-y-3">
+                        <li class="flex items-center space-x-3">
+                            <span class="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
+                            <span class="text-gray-300 text-sm">Set gold et seller</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <span class="w-1.5 h-1.5 bg-yellow-500 rounded-full"></span>
+                            <span class="text-gray-300 text-sm">Vérification des produits entrants et sortants</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-card p-8 rounded-3xl opacity-80">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-xl font-bold text-white">Marketeur Digital</h2>
+                    <p class="text-gray-400 text-sm italic">Société Forever</p>
+                </div>
+                <p class="text-gray-400 text-sm">
+                    Promotion de produits et gestion de la présence digitale pour la marque Forever.
+                </p>
+            </div>
+
+        </div>
+
+        <section class="mt-20">
+            <h3 class="text-2xl font-bold mb-8 text-center italic text-gray-400 uppercase tracking-widest">Activités
+                Extra-Professionnelles</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-gray-900/50 p-6 rounded-xl border border-gray-800">
+                    <p class="text-yellow-500 font-bold mb-2">Déc 2024</p>
+                    <p class="text-sm">Participation au Hackathon "YOUR IDEA, OUR FUTURE" - El Jadida</p>
+                </div>
+                <div class="bg-gray-900/50 p-6 rounded-xl border border-gray-800">
+                    <p class="text-yellow-500 font-bold mb-2">Oct 2024</p>
+                    <p class="text-sm">Lauréat du concours de storytelling "Tell Your Story"</p>
+                </div>
+                <div class="bg-gray-900/50 p-6 rounded-xl border border-gray-800">
+                    <p class="text-yellow-500 font-bold mb-2">Football</p>
+                    <p class="text-sm">Participation au Football Association pour former les enfants</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

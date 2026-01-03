@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets | Abdelhakim Bougraine</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        .nav-glow {
+            border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+            box-shadow: 0 4px 15px -5px rgba(212, 175, 55, 0.4);
+        }
+
+        .project-card {
+            background: rgba(26, 32, 44, 0.8);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: #eab308;
+            transform: translateY(-10px);
+        }
+
+        .admin-panel {
+            background: rgba(15, 23, 42, 0.95);
+            border: 2px dashed #eab308;
+            display: none;
+        }
+    </style>
+</head>
+
+<body class="bg-[#0f172a] text-white font-sans">
+
+    <nav class="bg-[#1a202c] nav-glow p-4 sticky top-0 z-50">
+        <ul class="flex justify-center space-x-6 font-medium">
+            <li><a href="index.html" class="hover:text-yellow-500 transition">Home</a></li>
+            <li><a href="projet.html" class="text-yellow-500 border-b-2 border-yellow-500">Projects</a></li>
+            <li><button onclick="toggleAdmin()" class="text-gray-500 hover:text-white text-xs">Admin Mode</button></li>
+        </ul>
+    </nav>
+
+    <main class="max-w-6xl mx-auto py-16 px-6">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold italic mb-4">Mes <span class="text-yellow-500">Projets</span></h1>
+            <p class="text-gray-400">Gérez vos réalisations en temps réel</p>
+        </header>
+
+        <div id="adminPanel" class="admin-panel p-8 rounded-2xl mb-12">
+            <h2 class="text-xl font-bold mb-4 text-yellow-500 text-center">Ajouter un Nouveau Projet</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <input type="text" id="projTitle" placeholder="Titre du Projet"
+                    class="bg-gray-800 p-3 rounded border border-gray-700 focus:border-yellow-500 outline-none">
+                <input type="text" id="projCategory" placeholder="Catégorie (Marketing, Dev...)"
+                    class="bg-gray-800 p-3 rounded border border-gray-700 focus:border-yellow-500 outline-none">
+                <input type="text" id="projImg" placeholder="Lien de l'image (URL)"
+                    class="bg-gray-800 p-3 rounded border border-gray-700 focus:border-yellow-500 outline-none">
+                <textarea id="projDesc" placeholder="Description courte"
+                    class="bg-gray-800 p-3 rounded border border-gray-700 focus:border-yellow-500 outline-none md:col-span-2"></textarea>
+                <button onclick="addProject()"
+                    class="md:col-span-2 bg-yellow-500 text-black font-bold py-3 rounded hover:bg-yellow-400 transition">Publier
+                    le Projet</button>
+            </div>
+        </div>
+
+        <div id="projectsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        </div>
+    </main>
+
+    <script>
+
+        let projects = JSON.parse(localStorage.getItem('myProjects')) || [
+            {
+                title: "Tell Your Story",
+                category: "MARKETING",
+                img: "https://via.placeholder.com/400x250/b45309/ffffff?text=Storytelling",
+                desc: "Lauréat du concours de storytelling organisé par l'Académie WAY."
+            }
+        ];
+
+        function displayProjects() {
+            const container = document.getElementById('projectsContainer');
+            container.innerHTML = '';
+
+            projects.forEach((p, index) => {
+                container.innerHTML += `
+                    <div class="project-card rounded-2xl overflow-hidden relative">
+                        <img src="${p.img}" alt="${p.title}" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <span class="text-[10px] text-yellow-500 font-bold tracking-widest uppercase">${p.category}</span>
+                            <h3 class="text-xl font-bold mt-1 text-white">${p.title}</h3>
+                            <p class="text-gray-400 text-sm mt-2">${p.desc}</p>
+                            <button onclick="deleteProject(${index})" class="mt-4 text-red-500 text-xs hover:underline">Supprimer</button>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+
+        function addProject() {
+            const title = document.getElementById('projTitle').value;
+            const category = document.getElementById('projCategory').value;
+            const img = document.getElementById('projImg').value;
+            const desc = document.getElementById('projDesc').value;
+
+            if (title && img) {
+                projects.push({ title, category, img, desc });
+                localStorage.setItem('myProjects', JSON.stringify(projects));
+                displayProjects();
+
+                document.querySelectorAll('#adminPanel input, #adminPanel textarea').forEach(i => i.value = '');
+                toggleAdmin();
+            } else {
+                alert("Veuillez remplir au moins le titre et le lien de l'image");
+            }
+        }
+
+        function deleteProject(index) {
+            if (confirm("Supprimer ce projet ?")) {
+                projects.splice(index, 1);
+                localStorage.setItem('myProjects', JSON.stringify(projects));
+                displayProjects();
+            }
+        }
+
+        function toggleAdmin() {
+            const panel = document.getElementById('adminPanel');
+            panel.style.display = panel.style.display === 'block' ? 'none' : 'block';
+        }
+        displayProjects();
+    </script>
+</body>
+
+</html>

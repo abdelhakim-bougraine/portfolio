@@ -4,26 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>abdelhakim bougraine</title>
+    <title>Abdelhakim Bougraine | Portfolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
+    <style>
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+        }
+
+        .nav-glow {
+            border-bottom: 2px solid rgba(212, 175, 55, 0.5);
+            box-shadow: 0 4px 15px -5px rgba(212, 175, 55, 0.4);
+        }
+    </style>
 </head>
 
-<body>
-    <nav>
-        <ul>
-                <il>
-                    <il><a href="index.html"></a>Home</il>
-                    <il><a href="about.html"></a>about</il>
-                    <il><a href="education.html"></a>education</il>
-                    <il><a href="experience.html"></a>Experience</il>
-                    <il><a href="projects.html"></a>Projects</il>
-                    <il><a href="contact.html"></a>Contact</il>
-                </il>
-            </il>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+    <nav class="bg-[#1a202c] nav-glow p-4 sticky top-0 z-50">
+        <ul class="flex justify-center space-x-8 text-white font-medium">
+            <li><a href="index.html" class="hover:text-yellow-500 transition-colors">Home</a></li>
+            <li><a href="about.html" class="hover:text-yellow-500 transition-colors">About</a></li>
+            <li><a href="education.html" class="hover:text-yellow-500 transition-colors">Education</a></li>
+            <li><a href="experience.html" class="hover:text-yellow-500 transition-colors">Experience</a></li>
+            <li><a href="projet.html" class="hover:text-yellow-500 transition-colors">Projects</a></li>
+            <li><a href="contact.html" class="hover:text-yellow-500 transition-colors">Contact</a></li>
         </ul>
     </nav>
 
+    <section class="flex flex-col items-center justify-center py-20 px-4 text-center">
+
+        <div class="relative mb-8">
+            <div class="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-yellow-500 gold-glow">
+                <img class="w-full h-full object-cover" src="src/WhatsApp Image 2025-12-31 at 10.58.37.jpeg"
+                    alt="Abdelhakim Bougraine">
+            </div>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4">
+            Hi, I'm <span class="text-[#1a202c]">Abdelhakim Bougraine</span>
+        </h1>
+
+        <p class="text-lg text-gray-600 max-w-xl">
+            Welcome to my personal portfolio. I am passionate about technology and building impactful solutions.
+        </p>
+
+    </section>
+    <style>
+        body {
+            background-color: #0f172a;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        section,
+        nav {
+            position: relative;
+            z-index: 10;
+        }
+    </style>
+
+    <footer class="py-10 text-center text-gray-500">
+        <p>&copy; 2026 Abdelhakim Bougraine</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
