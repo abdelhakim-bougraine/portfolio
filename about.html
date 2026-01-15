@@ -1,97 +1,190 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formations | Abdelhakim Bougraine</title>
+    <title>About | Abdelhakim</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    
     <style>
-        .nav-glow {
-            border-bottom: 2px solid rgba(212, 175, 55, 0.5);
-            box-shadow: 0 4px 15px -5px rgba(212, 175, 55, 0.4);
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background-color: #05070a; 
+            color: #e2e8f0; 
         }
 
-        .timeline-card {
-            background: rgba(26, 32, 44, 0.8);
-            border-left: 4px solid #eab308;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease;
+        .nav-glow { border-bottom: 1px solid rgba(212, 175, 55, 0.1); }
+        
+        /* بطاقات احترافية بتوهج ناعم */
+        .info-card {
+            background: rgba(15, 23, 42, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .info-card:hover {
+            border-color: #eab308;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(234, 179, 8, 0.1);
         }
 
-        .timeline-card:hover {
-            transform: translateX(10px);
+        .icon-box {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(234, 179, 8, 0.1);
+            color: #eab308;
+            font-size: 1.2rem;
+            transition: 0.3s;
         }
+
+        .info-card:hover .icon-box {
+            background: #eab308;
+            color: #000;
+        }
+
+        /* أنيميشن أشرطة المهارات */
+        .progress-bar {
+            height: 4px;
+            background: #1e293b;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #eab308, #f59e0b);
+            box-shadow: 0 0 10px rgba(234, 179, 8, 0.5);
+        }
+
+        .letter-spacing { letter-spacing: 0.3em; }
     </style>
 </head>
-
-<body class="bg-[#0f172a] text-white font-sans">
+<body class="overflow-x-hidden">
 
     <nav class="bg-[#1a202c] nav-glow p-4 sticky top-0 z-50">
-        <ul class="flex justify-center space-x-8 font-medium text-sm md:text-base">
+        <ul class="flex justify-center space-x-8 text-white font-medium">
             <li><a href="index.html" class="hover:text-yellow-500 transition-colors">Home</a></li>
             <li><a href="about.html" class="hover:text-yellow-500 transition-colors">About</a></li>
-            <li><a href="education.html" class="text-yellow-500 underline">Education</a></li>
+            <li><a href="education.html" class="hover:text-yellow-500 transition-colors">Education</a></li>
             <li><a href="experience.html" class="hover:text-yellow-500 transition-colors">Experience</a></li>
             <li><a href="projet.html" class="hover:text-yellow-500 transition-colors">Projects</a></li>
             <li><a href="contact.html" class="hover:text-yellow-500 transition-colors">Contact</a></li>
         </ul>
     </nav>
 
-    <main class="relative z-10 max-w-4xl mx-auto py-16 px-6">
-
-        <header class="text-center mb-16">
-            <h2 class="text-4xl font-bold mb-4 italic">Mes <span class="text-yellow-500">Formations</span></h2>
-            <p class="text-gray-400">Mon parcours académique et mes certifications</p>
+    <main class="max-w-4xl mx-auto py-16 px-6">
+        
+        <header class="mb-20">
+            <p class="text-yellow-500 text-[9px] font-black uppercase letter-spacing mb-2">Curriculum Vitae</p>
+            <h1 class="text-2xl md:text-3xl font-light text-white tracking-tight">
+                Abdelhakim <span class="font-bold text-yellow-500">Bougraine</span>
+            </h1>
+            <div class="h-[2px] w-10 bg-yellow-500 mt-4 rounded-full"></div>
         </header>
 
-        <div class="space-y-8">
-
-            <div class="timeline-card p-6 rounded-r-xl shadow-xl">
-                <span class="text-yellow-500 font-bold text-sm">2025 - Présent</span>
-                <h3 class="text-xl font-bold mt-1">Développement Digital / Web</h3>
-                <p class="text-blue-400 font-medium">Auto-formation & Projets Pratiques</p>
-                <p class="text-gray-400 mt-2 text-sm leading-relaxed">
-                    Apprentissage intensif des technologies Web (HTML5, CSS3, JavaScript, Tailwind CSS) et création
-                    d'interfaces utilisateur interactives avec intégration d'effets visuels avancés.
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+            
+            <div class="md:col-span-12 info-card p-8 flex flex-col md:flex-row items-center gap-6">
+                <div class="icon-box shrink-0 shadow-lg shadow-yellow-500/10">
+                    <i class="fas fa-fingerprint"></i>
+                </div>
+                <p class="text-sm md:text-base leading-relaxed text-gray-400 italic text-center md:text-left">
+                    "Étudiant en 2e année en analyse marketing, passionné par la compréhension des comportements consommateurs et la création de stratégies innovantes."
                 </p>
             </div>
 
-            <div class="timeline-card p-6 rounded-r-xl shadow-xl">
-                <span class="text-yellow-500 font-bold text-sm">2023 - 2025</span>
-                <h3 class="text-xl font-bold mt-1">Dts en Analyse Marketing</h3>
-                <p class="text-blue-400 font-medium">IFIAG Vocational School - Casablanca</p>
-                <p class="text-gray-400 mt-2 text-sm">Diplôme obtenu avec focus sur le comportement du consommateur et
-                    les stratégies digitales.</p>
+            <div class="md:col-span-12 info-card p-8">
+                <h3 class="text-white text-[10px] font-bold uppercase letter-spacing mb-8 flex items-center gap-2">
+                    <i class="fas fa-terminal text-yellow-500"></i> Technical Stack
+                </h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div class="flex items-center gap-3 group">
+                        <i class="fab fa-html5 text-3xl text-[#E34F26] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-white transition-colors">HTML5</span>
+                    </div>
+                    <div class="flex items-center gap-3 group">
+                        <i class="fab fa-css3-alt text-3xl text-[#38BDF8] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-white transition-colors">Tailwind</span>
+                    </div>
+                    <div class="flex items-center gap-3 group">
+                        <i class="fab fa-js text-3xl text-[#F7DF1E] group-hover:scale-110 transition-transform"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-white transition-colors">JavaScript</span>
+                    </div>
+                    <div class="flex items-center gap-3 group">
+                        <i class="fab fa-github text-3xl text-white group-hover:scale-110 transition-transform"></i>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-gray-500 group-hover:text-white transition-colors">GitHub</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="timeline-card p-6 rounded-r-xl shadow-xl">
-                <span class="text-yellow-500 font-bold text-sm">2023 - 2025</span>
-                <h3 class="text-xl font-bold mt-1">DEUG en Commerce et Marketing</h3>
-                <p class="text-blue-400 font-medium">FSJES Ain Chock</p>
-                <p class="text-gray-400 mt-2 text-sm">Formation universitaire approfondie sur les bases de l'économie و
-                    المعاملات التجارية.</p>
+            <div class="md:col-span-6 info-card p-8">
+                <h3 class="text-white text-[10px] font-bold uppercase letter-spacing mb-6 flex items-center gap-2">
+                    <i class="fas fa-chart-line text-yellow-500"></i> Analytics
+                </h3>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-bullseye text-[#ff4b2b] text-sm"></i>
+                        <span class="text-xs text-gray-400">Marketing Strategy</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-award text-yellow-500 text-sm"></i>
+                        <span class="text-xs text-gray-400">HubSpot Academy Certified</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="timeline-card p-6 rounded-r-xl shadow-xl">
-                <span class="text-yellow-500 font-bold text-sm">Juin 2024</span>
-                <h3 class="text-xl font-bold mt-1">Formation en Intelligence Artificielle</h3>
-                <p class="text-blue-400 font-medium">IFIAG / Académie Chemin</p>
-                <p class="text-gray-400 mt-2 text-sm">Exploration des outils d'IA pour optimiser les processus marketing
-                    et créatifs.</p>
+            <div class="md:col-span-6 info-card p-8">
+                <h3 class="text-white text-[10px] font-bold uppercase letter-spacing mb-6 flex items-center gap-2">
+                    <i class="fas fa-brain text-yellow-500"></i> Essence
+                </h3>
+                <div class="space-y-5">
+                    <div>
+                        <div class="flex justify-between text-[9px] uppercase font-bold text-gray-500 mb-1">
+                            <span><i class="fas fa-lightbulb text-yellow-500 mr-2"></i>Créativité</span>
+                            <span class="text-yellow-500">100%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill w-full"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-[9px] uppercase font-bold text-gray-500 mb-1">
+                            <span><i class="fas fa-comments text-blue-400 mr-2"></i>Négociation</span>
+                            <span class="text-yellow-500">100%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill w-full"></div></div>
+                    </div>
+                </div>
             </div>
 
-            <div class="timeline-card p-6 rounded-r-xl shadow-xl opacity-80">
-                <span class="text-yellow-500 font-bold text-sm">2022 - 2023</span>
-                <h3 class="text-xl font-bold mt-1">BAC Sciences Physiques</h3>
-                <p class="text-blue-400 font-medium">Option Arabe</p>
+            <div class="md:col-span-12 info-card p-6 border-red-900/10 flex items-center justify-between group">
+                <div class="flex items-center gap-4">
+                    <div class="icon-box bg-red-500/5 text-red-900 group-hover:text-red-500">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-white text-xs font-bold uppercase tracking-wider">Sécurité & Surveillance</h4>
+                        <p class="text-[9px] text-gray-600 mt-1 uppercase font-bold">Professionnel · Est. 2025</p>
+                    </div>
+                </div>
+                <i class="fas fa-chevron-right text-gray-800 group-hover:text-yellow-500 transition-colors"></i>
             </div>
 
         </div>
+
+        <footer class="mt-20 flex justify-center space-x-12 opacity-40">
+            <i class="fas fa-futbol hover:text-yellow-500 transition-all cursor-help hover:scale-125"></i>
+            <i class="fas fa-book hover:text-yellow-500 transition-all cursor-help hover:scale-125"></i>
+            <i class="fas fa-pen-nib hover:text-yellow-500 transition-all cursor-help hover:scale-125"></i>
+        </footer>
 
     </main>
 
     <script src="script.js"></script>
 </body>
-
 </html>

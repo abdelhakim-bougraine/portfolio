@@ -1,114 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Abdelhakim Bougraine</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
     <style>
-        .nav-glow {
-            border-bottom: 2px solid rgba(212, 175, 55, 0.5);
-            box-shadow: 0 4px 15px -5px rgba(212, 175, 55, 0.4);
-        }
-
-        .contact-card {
-            background: rgba(26, 32, 44, 0.8);
+        .nav-glow { border-bottom: 2px solid rgba(212, 175, 55, 0.5); box-shadow: 0 4px 15px -5px rgba(212, 175, 55, 0.4); }
+        
+        .social-card {
+            background: rgba(26, 32, 44, 0.6);
             border: 1px solid rgba(212, 175, 55, 0.2);
-            backdrop-filter: blur(10px);
+            backdrop-filter: blur(15px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+        }
+        
+        .social-card:hover {
+            transform: translateY(-10px);
+            border-color: #eab308;
+            box-shadow: 0 0 30px rgba(234, 179, 8, 0.4);
         }
 
-        .input-glow:focus {
-            border-color: #eab308;
-            box-shadow: 0 0 10px rgba(234, 179, 8, 0.3);
-            outline: none;
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            font-size: 1.8rem;
         }
     </style>
 </head>
-
 <body class="bg-[#0f172a] text-white font-sans">
 
     <nav class="bg-[#1a202c] nav-glow p-4 sticky top-0 z-50">
-        <ul class="flex justify-center space-x-10 font-medium">
+        <ul class="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-white font-medium text-sm md:text-base">
             <li><a href="index.html" class="hover:text-yellow-500 transition">Home</a></li>
+            <li><a href="about.html" class="hover:text-yellow-500 transition">About</a></li>
+            <li><a href="education.html" class="hover:text-yellow-500 transition">Education</a></li>
+            <li><a href="experience.html" class="hover:text-yellow-500 transition">Experience</a></li>
             <li><a href="projet.html" class="hover:text-yellow-500 transition">Projects</a></li>
             <li><a href="contact.html" class="text-yellow-500 border-b-2 border-yellow-500 pb-1">Contact</a></li>
         </ul>
     </nav>
 
-    <main class="max-w-6xl mx-auto py-20 px-6">
+    <main class="max-w-5xl mx-auto py-16 px-6">
         <header class="text-center mb-16">
-            <h1 class="text-4xl font-bold italic mb-4">Contactez-moi sur <span class="text-green-500">WhatsApp</span>
-            </h1>
-            <p class="text-gray-400">Remplissez le formulaire لفتح دردشة مباشرة معي</p>
+            <h1 class="text-4xl md:text-6xl font-black italic mb-4">CONNECT <span class="text-yellow-500">WITH ME</span></h1>
+            <p class="text-gray-400 tracking-widest text-xs uppercase">Cliquez sur une plateforme pour me joindre</p>
         </header>
 
-        <div class="grid md:grid-cols-2 gap-12">
-
-            <div class="contact-card p-8 rounded-2xl shadow-2xl">
-                <div class="space-y-5">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-2">Nom et Prénom</label>
-                        <input type="text" id="userName"
-                            class="w-full bg-gray-800/50 border border-gray-700 p-3 rounded-lg input-glow text-white"
-                            placeholder="Votre nom et prénom">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-400 mb-2">Ce que vous avez besoin
-                            (Sujet)</label>
-                        <textarea id="userNeed" rows="4"
-                            class="w-full bg-gray-800/50 border border-gray-700 p-3 rounded-lg input-glow text-white"
-                            placeholder="Expliquez ce que vous cherchez..."></textarea>
-                    </div>
-                    <button onclick="sendToWhatsApp()"
-                        class="w-full bg-green-600 text-white font-black py-4 rounded-lg hover:bg-green-500 transition shadow-[0_0_15px_rgba(34,197,94,0.4)] uppercase tracking-widest flex items-center justify-center gap-2">
-                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                            <path
-                                d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.319 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.438-9.889 9.886-.001 1.92.483 3.467 1.464 5.232l-1.123 4.105 4.221-1.108z" />
-                        </svg>
-                        Envoyer sur WhatsApp
-                    </button>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <a href="https://wa.me/212630648232" target="_blank" class="social-card p-8 rounded-3xl flex flex-col items-center text-center">
+                <div class="icon-box bg-green-500/10 text-green-500 mb-4">
+                    <i class="fab fa-whatsapp"></i>
                 </div>
-            </div>
+                <h3 class="font-bold text-xl">WhatsApp</h3>
+                <p class="text-gray-400 text-sm mt-1">Discuter en direct</p>
+            </a>
 
-            <div class="flex flex-col justify-center space-y-8">
-                <div class="contact-card p-8 rounded-2xl border-l-4 border-l-yellow-500">
-                    <h3 class="text-xl font-bold mb-4 italic text-yellow-500">Informations de contact</h3>
-                    <div class="space-y-4">
-                        <p class="flex items-center gap-3">
-                            <span class="text-yellow-500 font-bold">Email:</span>
-                            <span class="text-gray-300">bougrane200@gmail.com</span>
-                        </p>
-                        <p class="flex items-center gap-3">
-                            <span class="text-yellow-500 font-bold">Tel:</span>
-                            <span class="text-gray-300">+212 630648232</span>
-                        </p>
-                        <p class="text-sm text-gray-500 mt-4 italic">Disponible pour toute opportunité de collaboration
-                            en Analyse Marketing ou Développement Digital.</p>
-                    </div>
+            <a href="https://www.linkedin.com/feed/" target="_blank" class="social-card p-8 rounded-3xl flex flex-col items-center text-center">
+                <div class="icon-box bg-blue-600/10 text-blue-500 mb-4">
+                    <i class="fab fa-linkedin-in"></i>
                 </div>
-            </div>
+                <h3 class="font-bold text-xl">LinkedIn</h3>
+                <p class="text-gray-400 text-sm mt-1">Profil Professionnel</p>
+            </a>
 
+            <a href="https://www.instagram.com/abdelhakim_monstre/
+          
+            " target="_blank" class="social-card p-8 rounded-3xl flex flex-col items-center text-center">
+                <div class="icon-box bg-pink-600/10 text-pink-500 mb-4">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <h3 class="font-bold text-xl">Instagram</h3>
+                <p class="text-gray-400 text-sm mt-1">Suivez mes actualités</p>
+            </a>
+
+            <a href="https://github.com/" target="_blank" class="social-card p-8 rounded-3xl flex flex-col items-center text-center">
+                <div class="icon-box bg-gray-700/30 text-white mb-4">
+                    <i class="fab fa-github"></i>
+                </div>
+                <h3 class="font-bold text-xl">GitHub</h3>
+                <p class="text-gray-400 text-sm mt-1">Mes codes sources</p>
+            </a>
+
+            <a href="https://www.facebook.com/" target="_blank" class="social-card p-8 rounded-3xl flex flex-col items-center text-center">
+                <div class="icon-box bg-blue-800/10 text-blue-700 mb-4">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <h3 class="font-bold text-xl">Facebook</h3>
+                <p class="text-gray-400 text-sm mt-1">Réseau Social</p>
+            </a>
+
+            <a href="mailto:bougrane200@gmail.com" class="social-card p-8 rounded-3xl flex flex-col items-center text-center">
+                <div class="icon-box bg-yellow-500/10 text-yellow-500 mb-4">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3 class="font-bold text-xl">E-mail</h3>
+                <p class="text-gray-400 text-sm mt-1">bougrane200@gmail.com</p>
+            </a>
+
+        </div>
+
+        <div class="mt-20 text-center">
+            <p class="text-gray-500 text-sm italic">Basé à Casablanca, Maroc</p>
+            <p class="text-yellow-500 font-bold text-xl mt-2 tracking-widest">+212 630648232</p>
         </div>
     </main>
 
-    <script>
-        function sendToWhatsApp() {
-            const name = document.getElementById('userName').value;
-            const need = document.getElementById('userNeed').value;
-            const myNumber = "212630648232";
-
-            if (name && need) {
-                const message = `Bonjour Abdelhakim, %0A%0AJe suis : ${name} %0A%0AJ'ai besoin de : ${need}`;
-
-                const whatsappUrl = `https://wa.me/${myNumber}?text=${message}`;
-                window.open(whatsappUrl, '_blank');
-            } else {
-                alert("Veuillez remplir votre nom et votre besoin avant d'envoyer.");
-            }
-        }
-    </script>
     <script src="script.js"></script>
 </body>
-
 </html>
