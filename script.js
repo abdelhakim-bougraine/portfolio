@@ -280,3 +280,10 @@ window.addEventListener('DOMContentLoaded', loadNav);
 
 init();
 animate();
+
+const toggleBtn = document.getElementById("mobile-nav-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
+
+toggleBtn.addEventListener("click", () => {
+  mobileMenu.classList.toggle("hidden");
+});
